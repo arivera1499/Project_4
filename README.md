@@ -1,4 +1,4 @@
-# Logistic Regrssion Analysis
+# Logistic Regression Analysis
 
 #Project Overview
 
