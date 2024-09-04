@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Ensures that the form elements are displayed in a column */
+    max-width: 400px;
+    margin: auto;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#prediction-result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}

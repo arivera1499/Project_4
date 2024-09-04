@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Model</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for AJAX -->
+</head>
+<body>
+    <h1>Prediction Model</h1>
+    <form id="prediction-form">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" step="1" required>
+        
+        <label for="sex_female">Sex Female (1 or 0):</label>
+        <input type="number" id="sex_female" name="sex_female" step="1" required>
+        
+        <label for="sex_male">Sex Male (1 or 0):</label>
+        <input type="number" id="sex_male" name="sex_male" step="1" required>
+        
+        <label for="ticket_113760">Ticket 113760 (1 or 0):</label>
+        <input type="number" id="ticket_113760" name="ticket_113760" step="1" required>
+        
+        <label for="ticket_113781">Ticket 113781 (1 or 0):</label>
+        <input type="number" id="ticket_113781" name="ticket_113781" step="1" required>
+        
+        <label for="ticket_347054">Ticket 347054 (1 or 0):</label>
+        <input type="number" id="ticket_347054" name="ticket_347054" step="1" required>
+
+        <label for="ticket_pc_17572">Ticket PC 17572 (1 or 0):</label>
+        <input type="number" id="ticket_pc_17572" name="ticket_pc_17572" step="1" required>
+        
+        <label for="cabin_c49">Cabin C49 (1 or 0):</label>
+        <input type="number" id="cabin_c49" name="cabin_c49" step="1" required>
+        
+        <label for="cabin_e24">Cabin E24 (1 or 0):</label>
+        <input type="number" id="cabin_e24" name="cabin_e24" step="1" required>
+        
+        <label for="cabin_e77">Cabin E77 (1 or 0):</label>
+        <input type="number" id="cabin_e77" name="cabin_e77" step="1" required>
+
+        <button type="submit" id="predict-button">Predict</button>
+    </form>
+
+    <p id="prediction-result"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#prediction-form').on('submit', function(event) {
+                event.preventDefault();
+                
+                // Use AJAX to send form data to Flask server
+                $.ajax({
+                    url: '/predict',
+                    type: 'POST',
+                    data: $('#prediction-form').serialize(),
+                    success: function(response) {
+                        $('#prediction-result').text('Prediction: ' + response.prediction);
+                    },
+                    error: function(error) {
+                        $('#prediction-result').text('Error in prediction.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
