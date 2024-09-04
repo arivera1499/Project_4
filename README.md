@@ -70,7 +70,7 @@ Feature Importance Visualization:
 
 Visualized the importance of each feature based on the logistic regression coefficients. Features with positive coefficients (e.g., Housing_Index, Rate) are positively correlated with recessions, while features with negative coefficients (e.g., Price_x, INDPRO) are negatively correlated.
 
-Titanic Dataset Analysis:
+#Titanic Dataset Analysis:
 
 Similar steps were followed for the Titanic dataset:
 Feature selection using RFE.
@@ -78,9 +78,10 @@ Logistic regression modeling.
 Model evaluation using accuracy, precision, recall, and F1-score.
 Best model achieved an accuracy of 80%, with precision and recall metrics highlighting the model's strengths and weaknesses in predicting passenger survival.
 
-Results
+#Results
 
-US Recession Prediction:
+#US Recession Prediction:
+
 Best Model Accuracy: 93%
 Precision: 100% (indicating no false positives)
 Recall: 46% (indicating some false negatives)
@@ -88,7 +89,7 @@ F1-Score: 0.63
 
 The logistic regression model showed good precision, meaning the model rarely predicted a recession when there wasn't one, but it did struggle with identifying all actual recessions.
 
-Titanic Dataset (Additional Analysis):
+#Titanic Dataset (Additional Analysis):
 
 Best Model Accuracy: 80%
 Precision: 96%
@@ -96,7 +97,7 @@ Recall: 71%
 F1-Score: 0.82
 The Titanic model had a balanced performance, with good precision and a recall indicating it captured the majority of true survival outcomes.
 
-Dependencies
+#Dependencies
 
 The following libraries are required to run the project:
 
@@ -108,16 +109,7 @@ matplotlib
 seaborn
 PySpark (for the Spark-based analysis)
 
-US Recession Prediction:
-
-Run the script us_recession_analysis.py for logistic regression on the US Recession dataset.
-The script will output model performance metrics, ROC curve, and feature importance plot.
-
-Titanic Dataset Analysis:
-
-Run the script titanic_analysis.py for logistic regression on the Titanic dataset.
-
-Conclusion
+#Conclusion
 
 This project demonstrated how logistic regression can be used for binary classification tasks, with a focus on predicting US recessions based on economic indicators. Although the model achieved good precision, improving recall would make it more effective at identifying recessions in the real world. The additional analysis on the Titanic dataset further confirmed the flexibility of logistic regression for different datasets and problem types.
 
