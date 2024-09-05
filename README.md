@@ -25,11 +25,11 @@ In addition to the recession analysis, the Titanic dataset was analyzed using si
 
 ## Project Structure
 ----
-Code Files:
+#### Code Files:
 
-us_recession_analysis.py: Main script for loading, preprocessing, modeling, and evaluating the US recession prediction model.
+- us_recession_analysis.py: Main script for loading, preprocessing, modeling, and evaluating the US recession prediction model.
 
-titanic_analysis.py: Code for logistic regression analysis on the Titanic dataset, including feature selection, model evaluation, and hyperparameter tuning.
+- titanic_analysis.py: Code for logistic regression analysis on the Titanic dataset, including feature selection, model evaluation, and hyperparameter tuning.
 
 ### Key Steps:
 ----
