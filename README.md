@@ -1,3 +1,7 @@
+# Slideshow link
+
+https://docs.google.com/presentation/d/1kLVuWWvtw22eIXGVHkY_SOouNGFvt_YNLHfqQn1NTtY/edit?usp=sharing
+
 # Logistic Regression Analysis
 
 ### Project Overview
